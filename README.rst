@@ -1,8 +1,10 @@
-# Purpose
+Purpose
+=======
 
 Template repository for python packages with continuous integration and delivery support. This will be used as the basis of my other python projects.
 
-# setup
+setup
+=====
 
 Asumptions:
 

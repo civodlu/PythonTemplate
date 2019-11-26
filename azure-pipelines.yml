@@ -22,7 +22,7 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pytest --ignore=performance --cov-report html --junitxml=reports/tests.xml
+    pytest --ignore=performance --cov-report html --junitxml=reports/tests.xml --cov pte
   displayName: 'pytest'
   
 - task: PublishTestResults@2
