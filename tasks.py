@@ -1,4 +1,5 @@
 import argparse
+import subprocess
 
 description = """
 This is a simple python script to start the different tasks (e.g., test, publish, linters...).
@@ -8,6 +9,12 @@ the local machine.
 
 It is assumed that all python packages have already been installed (CI matrix or local).
 """
+
+
+def task_test(args):
+    code = subprocess.call(['pytest', '--ignore=performance', '--cov-report=html', '--junitxml=reports/tests.xml', '--cov=pte'])
+    exit(code)
+
 
 parser = argparse.ArgumentParser(description=description)
 parser.add_argument('--task', help='the name of the task to be performed')
@@ -23,4 +30,11 @@ task_fn = locals().get(task_name)
 if task_fn is None:
     raise RuntimeError('task={} was not found!'.format(task_name))
 
-raise NotImplemented()
+task_args = {}
+for kvp in args.task_args.split(';'):
+    if len(kvp) > 1:
+        splits = kvp.split(':')
+        assert len(splits) == 2, 'expected format `key:value`, got `{}`'.format(kvp)
+        task_args[splits[0]] = splits[1]
+
+task_fn(task_args)
