@@ -1,3 +1,6 @@
+.. image:: https://dev.azure.com/civodlu/pte/_apis/build/status/civodlu.PythonTemplate?branchName=master
+	:target: https://dev.azure.com/civodlu/pte/_build
+
 Purpose
 =======
 
