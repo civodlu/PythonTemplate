@@ -1,6 +1,3 @@
-.. image:: https://dev.azure.com/civodlu/pte/_apis/build/status/civodlu.PythonTemplate?branchName=master
-	:target: https://dev.azure.com/civodlu/pte/_build
-
 Purpose
 =======
 
@@ -16,3 +13,10 @@ Asumptions:
 * we have a file `requirements.txt` to specify the dependencies of our package
 * a configuration file `./src/%LibraryName%/metadata.py` that specify package metadata
 * we have a `README.rst` file to describe the package
+
+
+Builds
+======
+
+.. image:: https://dev.azure.com/civodlu/pte/_apis/build/status/civodlu.PythonTemplate?branchName=master
+   :target: https://dev.azure.com/civodlu/pte/_build
