@@ -9,3 +9,6 @@ install:
   
 script:
   - python tasks.py --task=task_test 
+
+after_success:
+  - coveralls

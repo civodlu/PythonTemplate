@@ -14,6 +14,13 @@ Asumptions:
 * a configuration file `./src/%LibraryName%/metadata.py` that specify package metadata
 * we have a `README.rst` file to describe the package
 
+Stack
+=====
+
+* travis CI for continuous integration: register on https://travis-ci.org and activate the repository
+	to activate in https://travis-ci.org/account/repositories and setup .travis.yml
+* coveralls: register on https://coveralls.io and setup .coveralls.yml
+
 
 Builds
 ======
