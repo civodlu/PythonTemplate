@@ -1,7 +1,16 @@
 language: python
-python:
-  - "3.6"
-  - "3.7"
+matrix:
+  include:
+  - name: "Python 3.6, windows"
+    os: windows 
+    language: shell       # 'language: python' is an error on Travis CI Windows
+    python: 3.6
+    
+  - name: "Python 3.6, linux"
+    dist: xenial 
+    language: shell       # 'language: python' is an error on Travis CI Windows
+    python: 3.6
+    
   
 install:
   - pip install -r requirements.txt
