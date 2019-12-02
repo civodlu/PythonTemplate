@@ -4,8 +4,10 @@ from os import path
 
 from setuptools import find_packages, setup
 
+import setup_utils
+
 # customize library name here
-NAME = 'pte'
+NAME = setup_utils.get_project_name()
 
 META_PATH = path.join('src', NAME, 'metadata.py')
 

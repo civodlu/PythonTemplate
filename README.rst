@@ -17,10 +17,16 @@ Asumptions:
 Stack
 =====
 
-* travis CI for continuous integration: register on https://travis-ci.org and activate the repository
-to activate in https://travis-ci.org/account/repositories and setup .travis.yml
+* travis CI for continuous integration: register on https://travis-ci.org and activate the repository to activate in https://travis-ci.org/account/repositories and setup .travis.yml
 
 * coveralls: register on https://coveralls.io and and update .travis.yml
+
+How to use this template
+========================
+
+Add all the files to your project. The following files require customization:
+
+* ./src/YourProjectName/metadata.py: important information regaring the project
 
 
 Builds
