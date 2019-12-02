@@ -8,4 +8,4 @@ install:
   - pip install -e .
   
 script:
-  - pytest 
+  - python tasks.py --task=task_test 
