@@ -20,3 +20,6 @@ Builds
 
 .. image:: https://dev.azure.com/civodlu/pte/_apis/build/status/civodlu.PythonTemplate?branchName=master
    :target: https://dev.azure.com/civodlu/pte/_build
+   
+.. image:: https://travis-ci.org/civodlu/PythonTemplate.svg?branch=master
+	:target: https://travis-ci.org/civodlu/PythonTemplate/builds
