@@ -19,6 +19,7 @@ Stack
 
 * travis CI for continuous integration: register on https://travis-ci.org and activate the repository
 to activate in https://travis-ci.org/account/repositories and setup .travis.yml
+
 * coveralls: register on https://coveralls.io and and update .travis.yml
 
 
