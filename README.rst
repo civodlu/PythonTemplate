@@ -3,7 +3,7 @@ Purpose
 
 Template repository for python packages with continuous integration and delivery support. This will be used as the basis of my other python projects.
 
-setup
+Setup
 =====
 
 Asumptions:
@@ -21,12 +21,21 @@ Stack
 
 * coveralls: register on https://coveralls.io and and update .travis.yml
 
+
 How to use this template
 ========================
 
 Add all the files to your project. The following files require customization:
 
 * ./src/YourProjectName/metadata.py: important information regaring the project
+
+
+TODO
+====
+
+* pre-commit: manages the git hooks. Must run `pre-commit install` with git in the path th first time. Run github desktop
+from the activated conda env. Currently problems with "ERROR: Could not find a version that satisfies the requirement 
+flake8 (from pre-commit-hooks==2.4.0) (from versions: none)"
 
 
 Builds
