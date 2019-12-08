@@ -1,7 +1,7 @@
 language: python
 matrix:
   include:
-  - name: "Python 3.5, windows"
+  - name: "Python 3.6, windows"
     os: windows 
     language: shell       # 'language: python' is an error on Travis CI Windows
     before_install:
