@@ -80,8 +80,6 @@ parser.add_argument('--task_args', help='the argument of the task, encoded as se
 
 args = parser.parse_args()
 
-args.task = 'task_publish_and_bump_minor_version'
-
 
 task_name = args.task
 
