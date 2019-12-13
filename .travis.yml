@@ -1,7 +1,10 @@
 language: python
 matrix:
   include:
-  - name: "Python 3.6, windows"
+  - name: "Python 3.6, Linux"
+    python: 3.6
+    
+  - name: "Python 3.6, Windows"
     os: windows 
     language: shell       # 'language: python' is an error on Travis CI Windows
     before_install:
@@ -9,8 +12,12 @@ matrix:
       - python -m pip install --upgrade pip
     env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
     
-  - name: "Python 3.6, linux"
-    python: 3.6
+  - name: "Python 3.6 on macOS"
+    os: osx
+    osx_image: xcode9.4
+    language: shell
+    before_install: HOMEBREW_NO_AUTO_UPDATE=1 brew install libomp
+    env: PATH=/Users/travis/Library/Python/3.6/bin:$PATH
     
   
 install:
