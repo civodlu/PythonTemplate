@@ -11,7 +11,10 @@ matrix:
     language: shell       # 'language: python' is an error on Travis CI Windows
     before_install:
       - choco install python --version 3.6.7
-      - python -m pip install --upgrade pip  # upgrade pip first, else it won't work
+      
+      # upgrade pip first, else it won't work
+      # use `python`, there is no `python3` on windows!
+      - python -m pip install --upgrade pip
       - pip3 install torch==1.3.1+cpu torchvision==0.4.2+cpu -f https://download.pytorch.org/whl/torch_stable.html
     env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
     

@@ -21,6 +21,10 @@ def task_test(args):
     code = subprocess.call(['pytest', '--ignore=performance', '--cov-report=html', '--junitxml=reports/tests.xml', '--cov=pte'])
     exit(code)
 
+def task_make_docs(args):
+    code = subprocess.call(['sphinx-build', 'docs/source', 'docs/build'])
+    exit(code)
+
 
 def task_publish_and_bump_minor_version(args):
     """
