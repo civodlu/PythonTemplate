@@ -18,7 +18,7 @@ def task_test(args):
     """
     Command to run the unit tests
     """
-    code = subprocess.call(['pytest', '--ignore=performance', '--cov-report=html', '--junitxml=reports/tests.xml', '--cov=src'])
+    code = subprocess.call(['pytest', '--ignore=performance', '--cov-report=html', '--junitxml=reports/tests.xml', '--cov=pte'])
     exit(code)
 
 def task_make_docs(args):
