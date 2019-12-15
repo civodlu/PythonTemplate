@@ -1,5 +1,5 @@
 pytest
+coveralls
 pytest-cov
 pytest-azurepipelines
-coveralls
 twine
