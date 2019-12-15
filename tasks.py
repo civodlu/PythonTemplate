@@ -2,7 +2,11 @@ import argparse
 import subprocess
 import setup_utils
 import os
+import sys
 
+
+if sys.version_info[0] < 3:
+    raise Exception('Must be using Python 3. Current=' + str(sys.version_info))
 
 description = """
 This is a simple python script to start the different tasks (e.g., test, publish, linters...).
