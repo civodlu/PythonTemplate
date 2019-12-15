@@ -27,9 +27,10 @@ def task_test(args):
     project_name = setup_utils.get_project_name()
     code = subprocess.call(['pytest', '--ignore=performance', '--cov-report=html', '--junitxml=reports/tests.xml', f'--cov={project_name}'])
 
-    if args.return_instead_of_exit:
+    if args['return_instead_of_exit']:
         return code
     exit(code)
+
 
 def task_make_docs(args):
     code = subprocess.call(['sphinx-build', 'docs/source', 'docs/build'])
@@ -82,7 +83,7 @@ def task_publish_and_bump_minor_version(args):
         exit(1)
 
     # make sure that at minimum we can pass the UT
-    test_result = task_test(argparse.Namespace(return_instead_of_exit=True))
+    test_result = task_test({'return_instead_of_exit': True})
     if test_result != 0:
         print(f'Can\'t publish, unit test failed with code={test_result}!')
         exit(1)
