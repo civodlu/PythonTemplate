@@ -28,6 +28,7 @@ How to use this template
 Add all the files to your project. The following files require customization:
 
 * ./src/YourProjectName/metadata.py: important information regaring the project
+* ./docs/source/conf.py: to be customized
 
 
 TODO
