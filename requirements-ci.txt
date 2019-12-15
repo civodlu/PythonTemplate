@@ -1,5 +1,5 @@
 pytest
 pytest-cov
 pytest-azurepipelines
-coveralls
+coveralls==4.4
 twine
