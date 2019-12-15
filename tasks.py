@@ -27,7 +27,8 @@ def task_test(args):
     project_name = setup_utils.get_project_name()
     code = subprocess.call(['pytest', '--ignore=performance', '--cov-report=html', '--junitxml=reports/tests.xml', f'--cov={project_name}'])
 
-    if args['return_instead_of_exit']:
+    return_instead_of_exit = args.get('return_instead_of_exit')
+    if return_instead_of_exit:
         return code
     exit(code)
 
